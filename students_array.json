@@ -1,0 +1,17 @@
+[
+  { "name": "John McClane", "age": 24, "city": "New York", "state": "NY", "grade": 88, "enrollmentYear": 2021 },
+  { "name": "Ellen Ripley", "age": 27, "city": "Los Angeles", "state": "CA", "grade": 93, "enrollmentYear": 2022 },
+  { "name": "Sarah Connor", "age": 23, "city": "Chicago", "state": "IL", "grade": 85, "enrollmentYear": 2020 },
+  { "name": "Dutch Schaefer", "age": 29, "city": "Miami", "state": "FL", "grade": 91, "enrollmentYear": 2019 },
+  { "name": "Martin Riggs", "age": 21, "city": "Dallas", "state": "TX", "grade": 76, "enrollmentYear": 2023 },
+  { "name": "Frank Martin", "age": 26, "city": "Boston", "state": "MA", "grade": 89, "enrollmentYear": 2021 },
+  { "name": "Beatrix Kiddo", "age": 25, "city": "San Francisco", "state": "CA", "grade": 95, "enrollmentYear": 2022 },
+  { "name": "John Wick", "age": 28, "city": "Seattle", "state": "WA", "grade": 97, "enrollmentYear": 2021 },
+  { "name": "Max Rockatansky", "age": 22, "city": "Detroit", "state": "MI", "grade": 81, "enrollmentYear": 2020 },
+  { "name": "Rama", "age": 24, "city": "Philadelphia", "state": "PA", "grade": 92, "enrollmentYear": 2023 },
+  { "name": "Imperator Furiosa", "age": 23, "city": "Phoenix", "state": "AZ", "grade": 87, "enrollmentYear": 2021 },
+  { "name": "James Bond", "age": 30, "city": "Washington", "state": "DC", "grade": 90, "enrollmentYear": 2018 },
+  { "name": "Jason Bourne", "age": 27, "city": "Atlanta", "state": "GA", "grade": 84, "enrollmentYear": 2022 },
+  { "name": "Dominic Toretto", "age": 28, "city": "San Diego", "state": "CA", "grade": 79, "enrollmentYear": 2023 },
+  { "name": "Trinity", "age": 22, "city": "Houston", "state": "TX", "grade": 86, "enrollmentYear": 2020 }
+]
