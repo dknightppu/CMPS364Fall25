@@ -57,7 +57,7 @@ app.get("/grails/:id", async (req: Request, res: Response) => {
 // POST new sneaker
 app.post("/grails", async (req: Request, res: Response) => {
   const sneaker = req.body;
-  console.log("📦 Incoming sneaker data:", sneaker); // <— add this line
+  console.log("📦 Incoming sneaker data:", sneaker);
 
   try {
     await client.connect();
@@ -65,15 +65,35 @@ app.post("/grails", async (req: Request, res: Response) => {
     const collection = db.collection("grails");
 
     const result = await collection.insertOne(sneaker);
-    console.log("✅ Insert result:", result); // <— add this too
+    console.log("✅ Insert result:", result);
 
     res.status(201).json({
       message: "✅ New sneaker added successfully!",
       insertedId: result.insertedId,
     });
   } catch (err) {
-    console.error("❌ Error inserting sneaker:", err); // log the real cause
+    console.error("❌ Error inserting sneaker:", err);
     res.status(500).json({ error: "❌ Could not create new sneaker" });
+  } finally {
+    await client.close();
+  }
+});
+
+// DELETE all sneakers (purge)
+app.delete("/grails", async (req: Request, res: Response) => {
+  try {
+    await client.connect();
+    const db = client.db(dbName);
+    const collection = db.collection("grails");
+
+    const result = await collection.deleteMany({});
+    res.status(200).json({
+      message: "🗑️ Purge completed",
+      deletedCount: result.deletedCount
+    });
+  } catch (error) {
+    console.error("Error deleting documents:", error);
+    res.status(500).json({ error: "❌ Could not purge documents" });
   } finally {
     await client.close();
   }
