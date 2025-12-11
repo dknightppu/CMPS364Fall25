@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>All Books</title>
+</head>
+<body>
+  <h1>All Books</h1>
+
+  <form action="/books/search" method="GET">
+    <input type="text" name="q" placeholder="Search by title, author, or genre">
+    <button type="submit">Search</button>
+  </form>
+
+  <a href="/books/new">Add a New Book</a>
+
+  <ul>
+    <% books.forEach(book => { %>
+      <li>
+        <strong><%= book.title %></strong> by <%= book.author %> 
+        (<%= book.genre %>, <%= book.year %>)
+        | <a href="/books/<%= book._id %>/edit">Edit</a>
+        <form action="/books/<%= book._id %>/delete" method="POST" style="display:inline;">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+
+  <a href="/">Back Home</a>
+</body>
+</html>
